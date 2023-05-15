@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import { getCssText } from '@ignite-ui/react'
 import { globalStyles } from '../styles/global'
 import { Roboto } from 'next/font/google'
@@ -9,7 +9,7 @@ const roboto = Roboto({
   weight: ['400', '500', '700'],
   subsets: ['latin'],
   display: 'swap',
-});
+})
 
 export const metadata = {
   title: 'Ignite Call',
@@ -24,7 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
+        <style
+          id="stitches"
+          dangerouslySetInnerHTML={{ __html: getCssText() }}
+        />
       </head>
       <body className={roboto.className}>{children}</body>
     </html>
