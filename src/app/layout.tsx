@@ -2,6 +2,7 @@
 import { getCssText } from '@ignite-ui/react'
 import { globalStyles } from '../styles/global'
 import { Roboto } from 'next/font/google'
+import React from 'react'
 
 globalStyles()
 
