@@ -1,6 +1,9 @@
-import { globalStyles } from '@/styles/global'
-import './globals.css'
+"use client"
+import { getCssText } from '@ignite-ui/react'
+import { globalStyles } from '../styles/global'
 import { Roboto } from 'next/font/google'
+
+globalStyles()
 
 const roboto = Roboto({
   weight: ['400', '500', '700'],
@@ -13,8 +16,6 @@ export const metadata = {
   description: 'Ignite Call App',
 }
 
-globalStyles()
-
 export default function RootLayout({
   children,
 }: {
@@ -22,6 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
+      </head>
       <body className={roboto.className}>{children}</body>
     </html>
   )
